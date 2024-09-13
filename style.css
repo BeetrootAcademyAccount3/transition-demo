@@ -1,0 +1,66 @@
+body {
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  padding: 50px;
+}
+
+.container {
+  border: 10px solid black;
+  height: 800px;
+  width: 800px;
+  background-color: aqua;
+}
+
+.item {
+  width: 160px;
+  height: 160px;
+  background-color: red;
+}
+
+.container:hover .item {
+  animation-name: slide;
+  animation-duration: 5000ms;
+  /* animation-timing-function: ease-in-out;
+  animation-delay: 2000ms; */
+  /* animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-fill-mode: backwards; */
+}
+/* 
+.item-1 {
+  transition-timing-function: ease-out;
+}
+
+.item-2 {
+  transition-timing-function: ease-in;
+}
+
+.item-3 {
+  transition-timing-function: ease-in-out;
+} */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+    background-color: blue;
+  }
+
+  25% {
+    transform: translateX(600px);
+    background-color: blue;
+  }
+
+  50% {
+    transform: translateY(600px) translateX(600px);
+    background-color: red;
+  }
+
+  75% {
+    transform: translateY(600px) translateX(0);
+    background-color: green;
+  }
+  to {
+    transform: translateX(0);
+    background-color: yellow;
+  }
+}
